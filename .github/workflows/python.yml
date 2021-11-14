@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       - id: set-matrix
         run: |
+          chmod +x matrix-gen.sh
           matrix_arr=($(./matrix-gen.sh))
           echo "::set-output name=matrix::{\"include\":[${matrix_arr[@]}]}"
 
