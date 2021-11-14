@@ -18,7 +18,7 @@ jobs:
       - id: set-matrix
         run: |
           chmod +x matrix-gen.sh
-          matrix_arr=($(./matrix-gen.sh))
+          matrix_arr=($(./matrix-gen.sh python))
           echo ${matrix_arr[@]}
           echo "::set-output name=matrix::{\"include\":[${matrix_arr[@]}]}"
 
