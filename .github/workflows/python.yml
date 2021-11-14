@@ -19,6 +19,7 @@ jobs:
         run: |
           chmod +x matrix-gen.sh
           matrix_arr=($(./matrix-gen.sh))
+          echo ${matrix_arr[@]}
           echo "::set-output name=matrix::{\"include\":[${matrix_arr[@]}]}"
 
   build-push-images:
