@@ -14,10 +14,12 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
+      - uses: actions/checkout@v2
       - id: set-matrix
         run: |
         matrix_arr=($(./matrix-gen.sh))
         echo "::set-output name=matrix::{\"include\":[${matrix_arr[@]}]}"
+
   build-push-images:
     needs: matrix-config
     runs-on: ubuntu-latest
