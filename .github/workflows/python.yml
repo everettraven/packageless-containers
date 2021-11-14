@@ -27,4 +27,4 @@ jobs:
     strategy:
       matrix: ${{ fromJson(needs.matrix-config.outputs.matrix) }}
     steps:
-      - run: echo ${{ matrix }}
+      - run: echo ${{ matrix.path }}
