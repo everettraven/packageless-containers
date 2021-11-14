@@ -9,8 +9,8 @@ do
 
     if [ ! $i = $((${#subdirs[@]} - 1)) ]
     then
-        echo "{\"path\":\"${subdirs[$i]}/Dockerfile\"},"
+        echo "{\"path\":\"${subdirs[$i]}/Dockerfile\", \"tag\":\"${subdirs[$i]##*/}\"},"
     else
-        echo "{\"path\":\"${subdirs[$i]}/Dockerfile\"}"
+        echo "{\"path\":\"${subdirs[$i]}/Dockerfile\", \"tag\":\"${subdirs[$i]##*/}\"}"
     fi
 done
