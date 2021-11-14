@@ -1,2 +1,2 @@
-# packageless-docker
-A repository to hold Dockerfiles for pims created for packageless
+# packageless-containers
+A repository to hold container files for pims created for packageless
